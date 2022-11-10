@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stlib.h> //Har vi brug for denne? Nu er den her.
 
 struct block
 {
