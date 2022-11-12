@@ -11,9 +11,9 @@
     <br>
     In the main directory type: "gcc -0 chatboot main.c functions.c"
     <br>
-    Now on mac type "./chatboot"
+    Now on <strong>mac</strong> type "./chatboot"
     <br>
-    And on windows type "chatboot".
+    And on <strong>windows</strong> type "chatboot".
   </p>
 </div>
 
