@@ -8,8 +8,11 @@
 
   <p align="center">
     <strong>Getting started:</strong>
+    <br>
     In the main directory type: "gcc -0 chatboot main.c functions.c"
+    <br>
     Now on mac type "./chatboot"
+    <br>
     And on windows type "chatboot".
   </p>
 </div>
