@@ -94,7 +94,7 @@ int ask_answer(int function_index)
     int answer;
 
     // question and two answer options
-    printf("\nQuestion: %s\n\n", chatter[function_index].question_int, chatter[function_index].question);
+    printf("\nQuestion: %s\n\n", chatter[function_index].question);
     printf("1) %s\n", chatter[function_index].svar1);
     printf("2) %s\n", chatter[function_index].svar2);
 
