@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "header.h"
 
 char scan_block()
 {
@@ -20,7 +20,7 @@ char scan_block()
         read = fscanf(file,
                       "%49[^,],%49[^,],%49[^\n]\n", // Her indlæser vi 3 strenge, de første to læser vi frem til komma, den sidste læser vi frem til linebreak.
                       chatter[records].question, chatter[records].svar1, chatter[records].svar2);
-        if (read == 3) // Hvis den læser 3 elementer i første linje tæller vi records op. HOV, der har jeg måske misforstået noget, Måske er det linjer?
+        if (read == 3) // Hvis den læser 3 elementer i første linje tæller vi records op. 
             records++;
 
         if (read != 3 && !feof(file)) // Hvis den læser et andet antal så laver vi endnu en exit.

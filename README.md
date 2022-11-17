@@ -9,7 +9,7 @@
   <p align="center">
     <strong>Getting started:</strong>
     <br>
-    In the main directory type: "gcc -0 chatboot main.c functions.c"
+    In the main directory type: "gcc -o chatbot chatbot.c text-reader.c"
     <br>
     Now on <strong>mac</strong> type "./chatboot"
     <br>
