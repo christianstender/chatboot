@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include "header.h"
 
-//main starts
-int main () {
+// main starts
+int main()
+{
     int function_index = 1, function_index_calculation, record_receiver, file_counter = 1;
 
     record_receiver = scan_block(file_counter);
@@ -21,8 +22,8 @@ int main () {
         if (function_index >= 8)
         {
             function_index = 1;
-            //overwrite værdierne i chatteret, så bruger får nye spørgsmål og svarmuligheder
-            //brug funktion
+            // overwrite værdierne i chatteret, så bruger får nye spørgsmål og svarmuligheder
+            // brug funktion
             printf("\n\n-------------\n\n");
         }
     }
@@ -30,8 +31,7 @@ int main () {
     return 0;
 }
 
-
-//function definitions
+// function definitions
 int scan_block(int fil1)
 {
     FILE *file;
@@ -92,39 +92,27 @@ int scan_block(int fil1)
 
 int ask_answer(int function_index)
 {
-    int answer, function_function_index = function_index;
-    
-    //question and two answer options
-    printf("\n%d ) %s\n\n", chatter[function_index].question_int, chatter[function_index].question);
-    printf("%d ) %s\n", chatter[function_index].svar1_int, chatter[function_index].svar1);
-    printf("%d ) %s\n", chatter[function_index].svar2_int, chatter[function_index].svar2);
+    int answer;
+
+    // question and two answer options
+    printf("\nQuestion: %s\n\n", chatter[function_index].question_int, chatter[function_index].question);
+    printf("1) %s\n", chatter[function_index].svar1);
+    printf("2) %s\n", chatter[function_index].svar2);
 
     printf("\nChoose your answer: ");
     scanf("%d", &answer);
 
-    if (answer == chatter[function_index].svar1_int)
+    // binary tree calculations
+    if (answer == 1)
     {
-        function_index = function_index + answer;
+        function_index = function_index * 2;
         printf("%d", function_index);
         return function_index;
     }
     else
     {
-        function_index = function_index + answer;
+        function_index = function_index * 2 + 1;
         printf("%d", function_index);
         return function_index;
     }
-    //else if(answer == 3)
-    //tuborgklammer 
-    //( return function index = function(function index))
-
-    // else if ('q' indtastet så quit, goodbye)
-    
-    //
-
-}
-
-//Vi tilføjer vores switchcase som skal gøre det muligt at springe tilbage.
-// Function: switch (function_index) case 2, function = 0, osv.
-
 }
