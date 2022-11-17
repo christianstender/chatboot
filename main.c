@@ -4,6 +4,7 @@
 #include "functions.h"
 
 //dette er bare en test
+// this is a test by JGPjgkjjygyj
 int main(void)
 {
     // Vi finder vores fil->
