@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "functions.h"
 
+//dette er bare en test
 int main(void)
 {
     // Vi finder vores fil->
