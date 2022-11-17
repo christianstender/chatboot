@@ -6,4 +6,4 @@ struct block
 };
 
 struct block chatter[100];
-char scan_block();
+int scan_block();

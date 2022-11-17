@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "header.h"
 
-char scan_block()
+int scan_block()
 {
     FILE *file;
     file = fopen("file.txt", "r"); //<- Vi forsøger at åbne filen i 'read' mode
@@ -42,5 +42,6 @@ char scan_block()
         printf("%s %s %s\n",
                chatter[i].question, chatter[i].svar1, chatter[i].svar2);
     printf("\n");
-    return 0;
+
+    return records;
 }
