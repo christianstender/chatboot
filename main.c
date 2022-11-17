@@ -105,13 +105,13 @@ int ask_answer(int function_index)
     if (answer == 1)
     {
         function_index = function_index * 2;
-        printf("%d", function_index);
+        printf("Index: %d\n", function_index);
         return function_index;
     }
     else
     {
         function_index = function_index * 2 + 1;
-        printf("%d", function_index);
+        printf("Index: %d\n", function_index);
         return function_index;
     }
 }
