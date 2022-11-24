@@ -11,8 +11,6 @@ int main()
 
     chatter = scan_block();
 
-    printf("---------------------\n");
-
     while (function_index < 8)
     {
         function_index = ask_answer(function_index, chatter);
@@ -105,7 +103,7 @@ int read_lines(FILE *file)
         counter = counter + 1;
     }
 
-    printf("\nThis is how many lines there are in your file: %d\n", counter);
+    printf("\nThis is how many lines there are in the read file: %d\n", counter);
 
     return counter;
 }
