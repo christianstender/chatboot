@@ -6,10 +6,10 @@
 // main starts
 int main()
 {
-    int function_index = 0;
-    block *chatter;
+    setbuf(stdout, NULL);
+    int function_index = 0, file_index = 0;
 
-    chatter = scan_block();
+    block *chatter = scan_block(file_index);
 
     while (function_index < 8)
     {
@@ -17,10 +17,13 @@ int main()
 
         if (function_index >= 8)
         {
-            function_index = 1;
+            function_index = 0;
+            file_index++;
+            free(chatter);
+            chatter = scan_block(file_index);
             // overwrite værdierne i chatteret, så bruger får nye spørgsmål og svarmuligheder
             // brug funktion
-            printf("\n\n-------------\n\n");
+            printf("\n\n------NEW FILE READ------\n\n");
         }
     }
 
@@ -28,9 +31,9 @@ int main()
 }
 
 // function definitions
-block *scan_block()
+block *scan_block(int file_index)
 {
-    FILE *file = fopen(file_names[0], "r");
+    FILE *file = fopen(file_names[file_index], "r");
 
     if (file == NULL)
     {
@@ -42,7 +45,7 @@ block *scan_block()
     rewind(file);
 
     int i;
-    int lines = read_lines(file) / 3;
+    int lines = read_lines(file);
     rewind(file);
 
     for (i = 0; i < lines; i++)
@@ -51,6 +54,8 @@ block *scan_block()
         fgets((chatter + i)->svar1, 50, file);
         fgets((chatter + i)->svar2, 50, file);
     }
+
+    fclose(file);
 
     return chatter;
 }
@@ -68,26 +73,36 @@ int ask_answer(int function_index, block *chatter)
     scanf("%d", &answer);
 
     // binary tree calculations
-    if (answer == 1)
+    if (answer == 1 && function_index != 0)
     {
         function_index = function_index * 2;
-        printf("Index: %d\n", function_index);
+        printf("\n|INDEX : %d|\n", function_index);
+        return function_index;
+    }
+    else if (answer == 2 && function_index != 0)
+    {
+        function_index = function_index * 2 + 1;
+        printf("\n|INDEX : %d|\n", function_index);
+        return function_index;
+    }
+    else if (answer == 1 && function_index == 0)
+    {
+        function_index = 2;
+        printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
     else
     {
-        function_index = function_index * 2 + 1;
-        printf("Index: %d\n", function_index);
+        function_index = 3;
+        printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
 }
 
 int size_of_file(FILE *file)
 {
-    // et eller andet vigtigt halløj
     fseek(file, 0L, SEEK_END);
 
-    // calculating the size of the file
     int result = ftell(file);
 
     return result;
@@ -103,7 +118,7 @@ int read_lines(FILE *file)
         counter = counter + 1;
     }
 
-    printf("\nThis is how many lines there are in the read file: %d\n", counter);
+    printf("\nLines in file: %d\n", counter);
 
     return counter;
 }

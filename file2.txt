@@ -1,4 +1,4 @@
-Q0 (from file.txt)
+Q0 (from file2.txt)
 S1(0)
 S2(0)
 Q1
