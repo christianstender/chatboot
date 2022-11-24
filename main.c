@@ -6,16 +6,16 @@
 // main starts
 int main()
 {
-    int function_index = 1, function_index_calculation, record_receiver, file_counter = 1;
+    int function_index = 0, function_index_calculation;
+    block *chatter;
 
-    record_receiver = scan_block(file_counter);
-    file_counter = file_counter + 1;
+    chatter = scan_block();
 
     printf("---------------------\n");
 
     while (function_index < 8)
     {
-        function_index_calculation = ask_answer(function_index);
+        function_index_calculation = ask_answer(function_index, chatter);
         function_index = function_index_calculation;
 
         if (function_index >= 8)
@@ -31,72 +31,41 @@ int main()
 }
 
 // function definitions
-int scan_block(int fil1)
+block *scan_block()
 {
-    FILE *file;
+    FILE *file = fopen(file_names[0], "r");
 
-    switch (fil1)
+    if (file == NULL)
     {
-    case 1:
-        file = fopen("file.txt", "r"); //<- Vi forsøger at åbne filen i 'read' mode
-        if (file == NULL)              // Vi laver et exit hvis filen ikk kan åbne
-        {
-            printf("Error opening file.\n");
-            return 1;
-        }
-        break;
-    case 2:
-        file = fopen("file2.txt", "r"); //<- Vi forsøger at åbne filen i 'read' mode
-        if (file == NULL)               // Vi laver et exit hvis filen ikk kan åbne
-        {
-            printf("Error opening file.\n");
-            return 1;
-        }
-        break;
+        printf("\nKunne ikke indlaese fil");
+        exit(EXIT_FAILURE);
     }
 
-    int read = 0;
-    int records = 0;
+    block *chatter = (block *)malloc(size_of_file(file));
+    rewind(file);
 
-    do // Hernede læser vi indholdet af filen
+    int i;
+    int lines = read_lines(file) / 3;
+    rewind(file);
+
+    for (i = 0; i < lines; i++)
     {
-        read = fscanf(file,
-                      "%49[^,],%49[^,],%49[^\n]\n", // Her indlæser vi 3 strenge, de første to læser vi frem til komma, den sidste læser vi frem til linebreak.
-                      chatter[records].question, chatter[records].svar1, chatter[records].svar2);
-        if (read == 3) // Hvis den læser 3 elementer i første linje tæller vi records op.
-            records++;
+        fgets((chatter + i)->question, 50, file);
+        fgets((chatter + i)->svar1, 50, file);
+        fgets((chatter + i)->svar2, 50, file);
+    }
 
-        if (read != 3 && !feof(file)) // Hvis den læser et andet antal så laver vi endnu en exit.
-        {
-            printf("File format incorrect.\n");
-            return 2;
-        }
-
-        if (ferror(file)) // Igen en error, hvis vi ikke kan læse selve filen.
-        {
-            printf("Error reading file.\n");
-            return 1;
-        }
-
-    } while (!feof(file)); // Vi når til enden af vores fil i vores do while
-    fclose(file);
-    printf("\n%d records read.\n\n", records); // Vi præsenterer hvor mange records der er læst
-    for (int i = 0; i < records; i++)          // Og vi printer det indlæste
-        printf("%s %s %s\n",
-               chatter[i].question, chatter[i].svar1, chatter[i].svar2);
-    printf("\n");
-
-    return 0;
+    return chatter;
 }
 
-int ask_answer(int function_index)
+int ask_answer(int function_index, block *chatter)
 {
     int answer;
 
     // question and two answer options
-    printf("\nQuestion: %s\n\n", chatter[function_index].question);
-    printf("1) %s\n", chatter[function_index].svar1);
-    printf("2) %s\n", chatter[function_index].svar2);
+    printf("\nQuestion: %s\n\n", (chatter + function_index)->question);
+    printf("1) %s\n", (chatter + function_index)->svar1);
+    printf("2) %s\n", (chatter + function_index)->svar2);
 
     printf("\nChoose your answer: ");
     scanf("%d", &answer);
@@ -114,4 +83,30 @@ int ask_answer(int function_index)
         printf("Index: %d\n", function_index);
         return function_index;
     }
+}
+
+int size_of_file(FILE *file)
+{
+    // et eller andet vigtigt halløj
+    fseek(file, 0L, SEEK_END);
+
+    // calculating the size of the file
+    int result = ftell(file);
+
+    return result;
+}
+
+int read_lines(FILE *file)
+{
+    char string[100];
+    int counter = 0;
+
+    while (fgets(string, 50, file) != NULL)
+    {
+        counter = counter + 1;
+    }
+    
+    printf("\nThis is how many lines there are in your file: %d\n", counter);
+
+    return counter;
 }

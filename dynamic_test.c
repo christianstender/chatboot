@@ -14,7 +14,7 @@ int main()
     fseek(file, 0L, SEEK_END);
 
     // calculating the size of the file
-    long int res = ftell(file);
+    int res = ftell(file);
 
     int res2 = (sizeof(char) * 4);
 
