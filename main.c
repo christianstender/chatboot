@@ -105,7 +105,7 @@ int read_lines(FILE *file)
     {
         counter = counter + 1;
     }
-    
+
     printf("\nThis is how many lines there are in your file: %d\n", counter);
 
     return counter;
