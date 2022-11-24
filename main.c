@@ -6,7 +6,7 @@
 // main starts
 int main()
 {
-    int function_index = 0, function_index_calculation;
+    int function_index = 0;
     block *chatter;
 
     chatter = scan_block();
@@ -15,8 +15,7 @@ int main()
 
     while (function_index < 8)
     {
-        function_index_calculation = ask_answer(function_index, chatter);
-        function_index = function_index_calculation;
+        function_index = ask_answer(function_index, chatter);
 
         if (function_index >= 8)
         {
