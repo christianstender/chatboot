@@ -1,4 +1,4 @@
-//"Chatbot", 2022, by Alberthe Held, Sigurd Kau, Mikkel Nielsen and Christian Stender. Version 0.0.2.
+//"Chatbot", 2022, by Alberthe Held, Sigurd Kau, Jens Petersen and Christian Stender. Version 0.0.2.
 #include <stdio.h>
 #include <stdlib.h>
 #include "header.h"
