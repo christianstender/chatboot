@@ -9,11 +9,11 @@
   <p align="center">
     <strong>Getting started:</strong>
     <br>
-    In the main directory type: "gcc -0 chatboot main.c functions.c"
+    In the main directory type: "gcc -c functions.c and after that gcc functions.o main.c"
     <br>
-    Now on <strong>mac</strong> type "./chatboot"
+    Now on <strong>mac</strong> type "./a.out yourname"
     <br>
-    And on <strong>windows</strong> type "chatboot".
+    And on <strong>windows</strong> type "a.exe yourname".
   </p>
 </div>
 

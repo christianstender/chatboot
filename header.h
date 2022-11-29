@@ -1,3 +1,4 @@
+// vores struct som indeholder question, svar1 og svar2
 struct block
 {
     char question[50];
@@ -6,10 +7,7 @@ struct block
 };
 typedef struct block block;
 
-char *file_names[3] = {"file.txt", "file2.txt", "file3.txt"};
-
-
-block *scan_block(int file_index);
+// prototyper af funktioner som vi kalder i main.c
+block *scan_block(int file_index, char *file_names[3]);
 int ask_answer(int index, block *chatter);
-int size_of_file(FILE *file);
-int read_lines(FILE *file);
+void chat_log(int index, block *chatter, int answer);
