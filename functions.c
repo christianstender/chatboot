@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "CuTest.h"
 #include "header.h"
+
 
 // definitioner af funktioner som vi kalder i main.c
 
@@ -130,4 +132,23 @@ void chat_log(int function_index, block *chatter, int answer)
 
     // lukker filen chat-log.txt
     fclose(log);
+}
+
+void test_til_suites(CuTest *tc)
+{
+    double acutal = sum_of_sides(0, 0, 1, 0, 1, 1);
+    double expected = 1.4142135624 + 1 + 1;
+
+    CuAssertDblEquals(tc, expected, acutal, 0.00001);
+}
+
+/****** SUIT *******/
+
+CuSuite *testsuite()
+{
+    CuSuite *suite = CuSuiteNew();
+    SUITE_ADD_TEST(suite, test_til_suites); // NEW
+    // TODO: Add more tests
+
+    return suite;
 }

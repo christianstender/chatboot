@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "CuTest.h"
 #include "header.h"
 
 char *file_names[3] = {"file.txt", "file2.txt", "file3.txt"};
