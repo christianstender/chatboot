@@ -134,12 +134,20 @@ void chat_log(int function_index, block *chatter, int answer)
     fclose(log);
 }
 
+double testfunktion(double testvariabel)
+{
+    double j;
+    j = testvariabel * 2;
+
+    return j;
+}
+
 void test_til_suites(CuTest *tc)
 {
-    double acutal = sum_of_sides(0, 0, 1, 0, 1, 1);
-    double expected = 1.4142135624 + 1 + 1;
+    double actual = testfunktion(2);
+    double expected = 6;
 
-    CuAssertDblEquals(tc, expected, acutal, 0.00001);
+    CuAssertDblEquals(tc, expected, actual, 0.00001);
 }
 
 /****** SUIT *******/

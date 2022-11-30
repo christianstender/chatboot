@@ -11,3 +11,5 @@ typedef struct block block;
 block *scan_block(int file_index, char *file_names[3]);
 int ask_answer(int index, block *chatter);
 void chat_log(int index, block *chatter, int answer);
+double testfunktion(double testvariabel);
+CuSuite *testsuite();

@@ -15,7 +15,7 @@ void RunAllTests(void) {
   CuSuite *suite = CuSuiteNew();
      
   // Adding test suites:
-  CuSuiteAddSuite(suite, (CuSuite *)calc_sideGetSuite());
+  CuSuiteAddSuite(suite, (CuSuite *)testsuite());
   // TODO: add more suites  
  
   CuSuiteRun(suite);
