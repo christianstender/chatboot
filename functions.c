@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 #include <math.h>
 #include "header.h"
 
@@ -18,25 +19,12 @@ block *scan_block(int file_index, char *file_names[3])
         exit(EXIT_FAILURE);
     }
 
-    // en kommando, der gør, at prints virker bedre
-    setbuf(stdout, NULL);
-
-    // initialiserer et char-array som er mellemmand i indlæsningen, i til  brug i while-løkken og total som skal indeholde størrelsen af filen vi indlæser
+    // initialiserer dynamisk array med 32 structs (passer med størrelsen på det binære træ) + initialiserer i og string til brug senere
+    // giver ik mening at have funktion, der tæller størrelsen af filen fordi vi kender størrelsen på det binære træ...
+    // og det ville giver mere kompliceret arbejde med det binære træ
+    block *chatter = malloc(32 * sizeof(block));
     char string[300];
-    int i = 0, total = 0;
-
-    // første læsning af fil char for char, for at finde størrelsen af filen i bytes
-    while (!feof(file) && !ferror(file))
-    {
-        fgetc(file);
-        total++;
-    }
-    // sætter fil-pointeren til at pege på første char i filen igen
-    rewind(file);
-
-    // initialiserer dynamisk array med størrelse lige fundet (1 char = 1 byte)
-    // størrelsen på malloc er ikke en joke... kan forklare når vi ses
-    block *chatter = malloc(15000);
+    int i = 0;
 
     // indlæsning til struct starter! (betingelsen for while-løkken betyder: Læser indtil vi kommer til enden af filen)
     for (i = 0; i < 32; i++)
@@ -67,6 +55,7 @@ int ask_answer(int function_index, block *chatter)
     printf("\nQuestion: %s\n\n", chatter[function_index].question);
     printf("1) %s\n", chatter[function_index].svar1);
     printf("2) %s\n", chatter[function_index].svar2);
+    printf("3) gaa tilbage til sidste spoergsmaal\n");
 
     // bruger kan inputte svar
     printf("\nChoose your answer: ");
@@ -76,9 +65,9 @@ int ask_answer(int function_index, block *chatter)
     chat_log(function_index, chatter, answer);
 
     // en lange if-else, der sørger for at returnere det korrekte index til main
-    if (answer != 1 && answer != 2)
+    if (answer != 1 && answer != 2 && answer != 3)
     {
-        printf("\nEXIT - Du indtastede noget andet end 1 eller 2\n");
+        printf("\nEXIT - Du indtastede noget andet end 1, 2 eller 3\n");
         exit(EXIT_FAILURE);
     }
 
@@ -106,11 +95,23 @@ int ask_answer(int function_index, block *chatter)
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
+    else if (answer == 3 && function_index % 2 == 0)
+    {
+        function_index = function_index / 2;
+        printf("\n|INDEX : %d|\n", function_index);
+        return function_index;
+    }
+    else if (answer == 3 && function_index % 2 != 0)
+    {
+        function_index = (function_index - 1) / 2;
+        printf("\n|INDEX : %d|\n", function_index);
+        return function_index;
+    }
 }
 
 void chat_log(int function_index, block *chatter, int answer)
 {
-    // åbner filen chat_log.txt
+    // flusher sidste version af chat_log.txt og åbner filen chat_log.txt
     FILE *log = fopen("chat_log.txt", "a");
 
     // printer question, svar1 og svar2 til filen chat_log.txt
@@ -127,7 +128,79 @@ void chat_log(int function_index, block *chatter, int answer)
     {
         fprintf(log, "You chose: 2) %s\n", chatter[function_index].svar2);
     }
+    else if (answer == 3)
+    {
+        fprintf(log, "Du gik tilbage til sidste spørgsmål\n");
+    }
 
     // lukker filen chat-log.txt
     fclose(log);
+}
+
+void anxiety_tracker(int climate_anxiety[], int anxiety_counter)
+{
+    int answer;
+
+    printf("Hvor meget klima-angst foeler du lige nu paa en skala fra 1-10? ");
+    scanf("%d", &answer);
+    printf("\nTak!\n");
+
+    climate_anxiety[anxiety_counter] = answer;
+}
+
+void print_anxiety(int climate_anxiety[])
+{
+    // forklarer det her in person :)
+    // funktionen her printer en illustration af brugerens klima-angst
+    
+    char line[12][50];
+    char integer1[3];
+    char integer2[3];
+    char integer3[3];
+    int i, k;
+
+    strcpy(line[11], "|___________________________\n");
+    
+    for (i = 0; i < 11; i++)
+    {
+        strcpy(line[i], "|                    \n");
+    }
+
+    for (k = 0; k < 3; k++)
+    {
+        for (i = 1; i < 11; i++)
+        {
+            if (climate_anxiety[k] == i && k == 0)
+            {
+                strcpy(line[11 - i], "|     ");
+
+                itoa(i, integer1, 10);
+                strcat(line[11 - i], integer1);
+                strcat(line[11 - i], "\n");
+            }
+            else if (climate_anxiety[k] == i && k == 1)
+            {
+                strcpy(line[11 - i], "|             ");
+                itoa(i, integer2, 10);
+                strcat(line[11 - i], integer2);
+                strcat(line[11 - i], "\n");
+            }
+            else if (climate_anxiety[k] == i && k == 2)
+            {
+                strcpy(line[11 - i], "|                    ");
+                itoa(i, integer3, 10);
+                strcat(line[11 - i], integer3);
+                strcat(line[11 - i], "\n");
+            }
+        }
+    }
+
+    printf("\n\n\nHer er progressionen over din klima-angst igennem samtalen: \n\n");
+
+    for (i = 0; i < 12; i++)
+    {
+        printf("%s", line[i]);
+    }
+
+    printf("\n\n");
 }
