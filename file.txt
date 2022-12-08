@@ -1,96 +1,48 @@
-Q0 (from file.txt)
-S1(0)
-S2(0)
-Q1
-S1(1)
-S2(1)
-Q2
-S1(2)
-S2(2)
-Q3
-S1(3)
-S2(3)
-Q4
-S1(4)
-S2(4)
-Q5
-S1(5) 
-S2(5)
-Q6
-S1(6)
-S2(6)
-Q7
-S1(7)
-S2(7)
-Q8
-S1(8)
-S2(8)
-Q9
-S1(9)
-S2(9)
-Q10
-S1(10)
-S2(10)
-Q11
-S1(11)
-S2(11)
-Q12
-S1(12)
-S2(12)
-Q13
-S1(13)
-S2(13)
-Q14
-S1(14)
-S2(14)
-Q15
-S1(15)
-S2(15)
-Q16
-S1(16)
-S2(16)
-Q17
-S1(17)
-S2(17)
-Q18
-S1(18)
-S2(18)
-Q19
-S1(19)
-S2(19)
-Q20
-S1(20)
-S2(20)
-Q21
-S1(21)
-S2(21)
-Q22
-S1(22)
-S2(22)
-Q23
-S1(23)
-S2(23)
-Q24
-S1(24)
-S2(24)
-Q25
-S1(25)
-S2(25)
-Q26
-S1(26)
-S2(26)
-Q27
-S1(27)
-S2(27)
-Q28
-S1(28)
-S2(28)
-Q29
-S1(29)
-S2(29)
-Q30
-S1(30)
-S2(30)
-Q31
-S1(31)
-S2(31)
+Q0 (from file.txt) Hvad faar dig til at foele dig bekymret omkring klimaet? 
+S1(0) Jeg er bekymret for at det er for sent at redde planeten.
+S2(0) Jeg er bekymret for ekstreme klimakatastrofer.
+waste
+waste
+waste
+Q1 Det forstaar jeg godt. Hvorfor foeler du, at det er for sent at redde planeten?
+S1(1) Fordi forskning og nyheder giver mig det indtryk. 
+S2(1) Jeg foeler at mine egne handlinger er ubetydelige i den stoerre kontekst. 
+Q2 Det forstaar jeg godt. Hvorfor er du bekymret for ekstreme klimakatastrofer?
+S1(2) Jeg er bekymret for andre mennesker.
+S2(2) Jeg er bange for at det vil ramme mig i fremtiden.
+Q3 Den store maengde af daarlige klima-nyheder har tendens til at overskygge, at der er mange omraader, hvor det ogsaa gaar godt. Hvilke foelelser bringer det op hos dig?
+S1(3) Ked af det og magtesloes.
+S2(3) Vred og frustreret.
+Q4 Det er en meget almindelig foelelse at have. Hvilke foelelser bringer det op hos dig?
+S1(4) Ked af det og magtesloes.
+S2(4) Vred og frustreret.
+Q5 Hvordan paavirker dette ansvar dig i din hverdag?
+S1(5) Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten. 
+S2(5) Jeg kan foele mig udmattet og deprimeret.
+Q6 Hvordan paavirker det dig i din hverdag?
+S1(6) Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten.
+S2(6) Jeg kan foele mig udmattet og deprimeret.
+Q7 Det er ikke rart at gaa med disse foelelser alene. Hvordan vil du kunne faa en foelelse af kontrol over dine klimabekymringer?
+S1(7) Jeg vil tage en pause og gaa en tur eller bruge tid paa noget jeg interesserer mig for.
+S2(7) Jeg vil dele mine bekymringer med mine venner og familie.
+Q8 Det er vigtigt at erkende, at klima-angst er en reel og valid bekymring. Klimakrisen er en stor trussel mod vores planet, og det kan vaere overvaeldende at taenke paa. Det er normalt at foele sig angst eller bange, naar man staar over for saadan et skraemmende problem. Husk, at du ikke er alene.
+S1(8) waste
+S2(8) waste
+Q9 Det er vigtigt at erkende, at klima-angst er en reel og valid bekymring. Klimakrisen er en stor trussel mod vores planet, og det kan vaere overvaeldende at taenke paa. Det er normalt at foele sig angst eller bange, naar man staar over for saadan et skraemmende problem. Husk, at du ikke er alene.
+S1(9) waste
+S2(9) waste
+Q10 En strategi til at haandtere klima-angst er at fokusere paa de ting, du kan kontrollere. Dette kan omfatte at reducere dit personlige kulstof-aftryk ved at traeffe miljoevenlige valg i din dagligdag, saasom at bruge offentlig transport eller cykle i stedet for at koere bil, reducere dit energiforbrug og vaelge at koebe produkter fra virksomheder, der prioriterer baeredygtighed. Disse skridt kan hjaelpe dig med at foele, at du bidrager til loesningen af problemet.
+S1(10) waste
+S2(10) waste
+Q11 Det er ikke rart at gaa med disse foelelser alene. Hvordan vil du kunne faa en foelelse af kontrol over dine klimabekymringer?
+S1(11) Jeg vil tage en pause og gaa en tur eller bruge tid paa noget jeg interesserer mig for. 
+S2(11) Jeg vil dele mine bekymringer med mine venner og familie.
+Q12 En strategi til at haandtere klima-angst er at fokusere paa de ting, du kan kontrollere. Dette kan omfatte at reducere dit personlige kulstof-aftryk ved at traeffe miljoevenlige valg i din dagligdag, saasom at bruge offentlig transport eller cykle i stedet for at koere bil, reducere dit energiforbrug og vaelge at koebe produkter fra virksomheder, der prioriterer baeredygtighed. Disse skridt kan hjaelpe dig med at foele, at du bidrager til loesningen af problemet.
+S1(12) waste
+S2(12) waste
+Q13 En vigtig del af at haandtere klima-angst er at finde maader at forbinde med andre, der deler dine bekymringer. Dette kan indebaere at deltage i faellesskaber og bevaegelser, der arbejder for at bekaempe klimaaendringerne. Det kan vaere lokale grupper, der plante traeer eller nationale organisationer, der kaemper for at aendre politikker paa klimaomraadet. At vaere en del af en stoerre gruppe kan give dig foelelsen af at goere en forskel og stoette fra andre, der forstaar dine bekymringer.
+S1(13) waste
+S2(13) waste
+Q14 En vigtig del af at haandtere klima-angst er at finde maader at forbinde med andre, der deler dine bekymringer. Dette kan indebaere at deltage i faellesskaber og bevaegelser, der arbejder for at bekaempe klimaaendringerne. Det kan vaere lokale grupper, der plante traeer eller nationale organisationer, der kaemper for at aendre politikker paa klimaomraadet. At vaere en del af en stoerre gruppe kan give dig foelelsen af at goere en forskel og stoette fra andre, der forstaar dine bekymringer.
+S1(14) waste
+S2(14) waste

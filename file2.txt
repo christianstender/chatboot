@@ -1,96 +1,48 @@
-Q0 (from file2.txt)
-S1(0)
-S2(0)
-Q1
-S1(1)
-S2(1)
-Q2
-S1(2)
-S2(2)
-Q3
-S1(3)
-S2(3)
-Q4
-S1(4)
-S2(4)
-Q5
-S1(5) 
-S2(5)
-Q6
-S1(6)
-S2(6)
-Q7
-S1(7)
-S2(7)
-Q8
-S1(8)
-S2(8)
-Q9
-S1(9)
-S2(9)
-Q10
-S1(10)
-S2(10)
-Q11
-S1(11)
-S2(11)
-Q12
-S1(12)
-S2(12)
-Q13
-S1(13)
-S2(13)
-Q14
-S1(14)
-S2(14)
-Q15
-S1(15)
-S2(15)
-Q16
-S1(16)
-S2(16)
-Q17
-S1(17)
-S2(17)
-Q18
-S1(18)
-S2(18)
-Q19
-S1(19)
-S2(19)
-Q20
-S1(20)
-S2(20)
-Q21
-S1(21)
-S2(21)
-Q22
-S1(22)
-S2(22)
-Q23
-S1(23)
-S2(23)
-Q24
-S1(24)
-S2(24)
-Q25
-S1(25)
-S2(25)
-Q26
-S1(26)
-S2(26)
-Q27
-S1(27)
-S2(27)
-Q28
-S1(28)
-S2(28)
-Q29
-S1(29)
-S2(29)
-Q30
-S1(30)
-S2(30)
-Q31
-S1(31)
-S2(31)
+Q0 (from file.txt)Hvordan paavirker dine bekymringer dit arbejdsliv?
+S1(0)[[Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten. |Spoergsmaal 2]]
+S2(0)[[Jeg kan foele mig udmattet og deprimeret|Spoergsmaal 3]]
+waste
+waste
+waste
+Q1Hvordan faar du tanken om klimaaendringer ud af hovedet?
+S1(1)[[Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante. |Spoergsmaal 4]]
+S2(1)[[Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv|Spoergsmaal 5]]
+Q2Hvordan faar du tanken om klimaaendringer ud af hovedet?
+S1(2)[[Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante. |Spoergsmaal 6]]
+S2(2)[[Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv|Spoergsmaal 7]]
+Q3 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan paavirker dine bekymringer dine relationer til andre?
+S1(3)[[Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.|Spoergsmaal 8]]
+S2(3)[[Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.|Spoergsmaal 9]]
+Q4 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan paavirker dine bekymringer dine relationer til andre?
+S1(4)[[Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.|Spoergsmaal 10]]
+S2(4)[[Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.|Spoergsmaal 11]]
+Q5 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer?  
+S1(5) [[Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.|Spoergsmaal 12]]
+S2(5)[[Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre|Spoergsmaal 13]]
+Q6 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer? 
+S1(6)[[Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.|Spoergsmaal 14]]
+S2(6)[[Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre|Spoergsmaal 15]]
+Q7 Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
+S1(7)[[Uh, jeg er ikke lige klar til at reflektere over noget endnu.|Spoergsmaal 16]]
+S2(7)[[Ja, jeg er klar til at gaa videre.|Spoergsmaal 17]]
+Q8 Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
+S1(8)[["waste"|Spoergsmaal 18]]
+S2(8)[["waste"Spoergsmaal 19]]
+Q9 Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
+S1(9)[["waste"|Spoergsmaal 20]]
+S2(9)[["waste"|Spoergsmaal 21]]
+Q10 Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
+S1(10)[["waste"|Spoergsmaal 22]]
+S2(10)[["waste" | Spoergsmaal 23]]
+Q11 Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
+S1(11)[[Uh, jeg er ikke lige klar til at reflektere over noget endnu.|Spoergsmaal 24]]
+S2(11)[[Ja, jeg er klar til at gaa videre.|Spoergsmaal 25]]
+Q12 Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. 
+S1(12)[["waste"|Spoergsmaal 26]]
+S2(12)[["waste"|Spoergsmaal 27]]
+Q13 Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op.
+S1(13)[["waste"|Spoergsmaal 28]]
+S2(13)[["waste"|Spoergsmaal 29]]
+Q14 Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
+S1(14)[["waste"|Spoergsmaal 30]]
+S2(14)[["waste"|Spoergsmaal 31]]

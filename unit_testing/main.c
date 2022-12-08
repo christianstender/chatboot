@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
+#include <time.h>
 #include <unistd.h>
 #include "header.h"
+#include "CuTest.h"
 
 char *file_names[3] = {"file.txt", "file2.txt", "file3.txt"};
 
@@ -13,7 +15,9 @@ int main()
     int function_index = 0, file_index = 0, climate_anxiety_counter = 0, end_of_tree = 16;
     int climate_anxiety[3];
     char username[20];
-    char context[3][650];
+    char context[3][100];
+    char random_comments[9][100];
+    srand(time(NULL));
 
     printf("\nHej med dig! Hvad hedder du? ");
     scanf("%s", &username);
@@ -34,9 +38,9 @@ int main()
             print_context(context, file_index);
         }
 
+
         if (function_index > 8 && function_index < end_of_tree && function_index != 8 && function_index != 12)
         {
-            chat_log(function_index, manuscript_ptr, 1);
             function_index = print_comment(manuscript_ptr, function_index);
         }
         else
