@@ -1,57 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
-#include <math.h>
+#include <conio.h>
+#include <time.h>
+#include <unistd.h>
 #include "header.h"
 
 char *file_names[3] = {"file.txt", "file2.txt", "file3.txt"};
 
-int main(int argc, char *argv[])
+int main()
 {
-    // sætter farve på baggrund og tekst
-    system("COLOR 0F");
 
-    // initialiserer heltal til at navigere det binære træ og til at åbne den rigtige .txt fil
-    int function_index = 0, file_index = 0, anxiety_counter = 0;
+    int function_index = 0, file_index = 0, climate_anxiety_counter = 0, end_of_tree = 32;
     int climate_anxiety[3];
+    char username[20];
+    char context[3][100];
+    char random_comments[9][100];
+    srand(time(NULL));
 
-    // indlæser .txt fil til structen
-    block *chatter = scan_block(file_index, file_names);
-    
-    // overwriting last version of chat_log
-    FILE *log_open = fopen("chat_log.txt", "w");
-    fclose(log_open);
+    printf("\nHej med dig! Hvad hedder du? ");
+    scanf("%s", &username);
+    printf("\nGodt at moede dig %s!\n\n", username);
 
-    // siger hej til brugeren via programparametre
-    printf("\n\nHej med dig %s :) Godt at snakke med dig!\n\n", argv[1]);
+    manuscript *manuscript_ptr = read_manuscript(file_index, file_names);
+    read_context(context);
+    read_random_comments(random_comments);
 
-    // et while-loop, der går gennem det binære træ
-    while (function_index < 32)
+    FILE *chatlog = fopen("chat_log.txt", "w");
+    fclose(chatlog);
+
+    while (function_index < end_of_tree)
     {
         if (function_index == 0)
         {
-            anxiety_tracker(climate_anxiety, anxiety_counter);
-            anxiety_counter++;
+            anxiety_tracker(climate_anxiety, climate_anxiety_counter);
+            climate_anxiety_counter++;
+            print_context(context, file_index);
         }
-        
-        // selve funktionen, der printer question, svar1 og svar2 til brugeren
-        function_index = ask_answer(function_index, chatter);
 
-        if (function_index >= 32 && anxiety_counter > 2)
+        if (function_index > 8 && function_index < 16 && function_index != 8 && function_index != 12)
         {
-            print_anxiety(climate_anxiety);
-        } 
+            print_random_comment(random_comments);
+            function_index = end_of_tree;
+        }
+        else
+        {
+            function_index = chat_with_user(function_index, manuscript_ptr);
+        }
 
-        else if (function_index >= 32)
+        if (function_index >= end_of_tree && climate_anxiety_counter > 2)
         {
-            // genstarter binært træ og gør klar til næste fil
+            print_anxiety_graph(climate_anxiety);
+            print_graph_comment(climate_anxiety);
+        }
+
+        else if (function_index >= end_of_tree)
+        {
             function_index = 0;
             file_index++;
-            free(chatter);
+            free(manuscript_ptr);
 
-            // indlæser ny fil
-            chatter = scan_block(file_index, file_names);
+            manuscript_ptr = read_manuscript(file_index, file_names);
             printf("\n\n------NEW FILE READ------\n\n");
         }
     }

@@ -1,107 +1,106 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
-#include <math.h>
+#include <conio.h>
+#include <time.h>
+#include <unistd.h>
 #include "header.h"
 
 // definitioner af funktioner som vi kalder i main.c
 
-block *scan_block(int file_index, char *file_names[3])
+manuscript *read_manuscript(int file_index, char *file_names[3])
 {
-    // åbner fil, hvor vi indlæser question, svar1 og svar2 fra
     FILE *file = fopen(file_names[file_index], "r");
 
-    // fail-safe som er et krav at have, når man åbner en fil
     if (file == NULL)
     {
         printf("\nKunne ikke indlaese fil");
         exit(EXIT_FAILURE);
     }
 
-    // initialiserer dynamisk array med 32 structs (passer med størrelsen på det binære træ) + initialiserer i og string til brug senere
-    // giver ik mening at have funktion, der tæller størrelsen af filen fordi vi kender størrelsen på det binære træ...
-    // og det ville giver mere kompliceret arbejde med det binære træ
-    block *chatter = malloc(32 * sizeof(block));
-    char string[300];
+    manuscript *manuscript_ptr = malloc(32 * sizeof(manuscript));
     int i = 0;
 
-    // indlæsning til struct starter! (betingelsen for while-løkken betyder: Læser indtil vi kommer til enden af filen)
     for (i = 0; i < 32; i++)
     {
-        fgets(string, 100, file);
-        strcpy(chatter[i].question, string);
+        fgets(manuscript_ptr[i].question, 100, file);
 
-        fgets(string, 100, file);
-        strcpy(chatter[i].svar1, string);
+        fgets(manuscript_ptr[i].svar1, 100, file);
 
-        fgets(string, 100, file);
-        strcpy(chatter[i].svar2, string);
+        fgets(manuscript_ptr[i].svar2, 100, file);
     }
 
-    // lukker fil vi indlæser question, svar1 og svar2 fra
     fclose(file);
 
-    // returnerer det dynamiske array til main
-    return chatter;
+    return manuscript_ptr;
 }
 
-int ask_answer(int function_index, block *chatter)
+int chat_with_user(int function_index, manuscript *manuscript_ptr)
 {
-    // initialiserer heltal som skal indeholde brugerens svar på spørgsmålet
-    int answer;
+    int user_answer;
 
-    // printer question, svar1 og svar2 til bruger
-    printf("\nQuestion: %s\n\n", chatter[function_index].question);
-    printf("1) %s\n", chatter[function_index].svar1);
-    printf("2) %s\n", chatter[function_index].svar2);
-    printf("3) gaa tilbage til sidste spoergsmaal\n");
+    if (function_index == 0)
+    {
+        printf("\nQuestion: %s\n\n", manuscript_ptr[function_index].question);
+        printf("1) %s\n", manuscript_ptr[function_index].svar1);
+        printf("2) %s\n", manuscript_ptr[function_index].svar2);
+    }
+    else
+    {
+        printf("\nQuestion: %s\n\n", manuscript_ptr[function_index].question);
+        printf("1) %s\n", manuscript_ptr[function_index].svar1);
+        printf("2) %s\n", manuscript_ptr[function_index].svar2);
+        printf("3) gaa tilbage til sidste spoergsmaal\n");
+    }
 
-    // bruger kan inputte svar
     printf("\nChoose your answer: ");
-    scanf("%d", &answer);
+    scanf("%d", &user_answer);
 
-    // kalder chatlog for at gemme question, svar1, svar2 og det svar brugeren valgte
-    chat_log(function_index, chatter, answer);
+    if (user_answer > 2 && function_index == 0)
+    {
+        printf("\nDu indtastede noget andet end svarmulighederne");
+        exit(EXIT_FAILURE);
+    }
 
-    // en lange if-else, der sørger for at returnere det korrekte index til main
-    if (answer != 1 && answer != 2 && answer != 3)
+    chat_log(function_index, manuscript_ptr, user_answer);
+
+    if (user_answer != 1 && user_answer != 2 && user_answer != 3)
     {
         printf("\nEXIT - Du indtastede noget andet end 1, 2 eller 3\n");
         exit(EXIT_FAILURE);
     }
 
-    if (answer == 1 && function_index != 0)
+    if (user_answer == 1 && function_index != 0)
     {
         function_index = function_index * 2;
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
-    else if (answer == 2 && function_index != 0)
+    else if (user_answer == 2 && function_index != 0)
     {
         function_index = function_index * 2 + 1;
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
-    else if (answer == 1 && function_index == 0)
+    else if (user_answer == 1 && function_index == 0)
     {
         function_index = 2;
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
-    else if (answer == 2 && function_index == 0)
+    else if (user_answer == 2 && function_index == 0)
     {
         function_index = 3;
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
-    else if (answer == 3 && function_index % 2 == 0)
+    else if (user_answer == 3 && function_index % 2 == 0)
     {
         function_index = function_index / 2;
         printf("\n|INDEX : %d|\n", function_index);
         return function_index;
     }
-    else if (answer == 3 && function_index % 2 != 0)
+    else if (user_answer == 3 && function_index % 2 != 0)
     {
         function_index = (function_index - 1) / 2;
         printf("\n|INDEX : %d|\n", function_index);
@@ -109,98 +108,235 @@ int ask_answer(int function_index, block *chatter)
     }
 }
 
-void chat_log(int function_index, block *chatter, int answer)
+void chat_log(int function_index, manuscript *manuscript_ptr, int user_answer)
 {
-    // flusher sidste version af chat_log.txt og åbner filen chat_log.txt
-    FILE *log = fopen("chat_log.txt", "a");
+    FILE *chatlog = fopen("chat_log.txt", "a");
 
-    // printer question, svar1 og svar2 til filen chat_log.txt
-    fprintf(log, "\nQuestion: %s---------\n", chatter[function_index].question);
-    fprintf(log, "1) %s\n", chatter[function_index].svar1);
-    fprintf(log, "2) %s\n", chatter[function_index].svar2);
+    fprintf(chatlog, "\nQuestion: %s---------\n", manuscript_ptr[function_index].question);
+    fprintf(chatlog, "1) %s\n", manuscript_ptr[function_index].svar1);
+    fprintf(chatlog, "2) %s\n", manuscript_ptr[function_index].svar2);
 
-    // if-else statement, der printer brugerens svar til chat_log.txt
-    if (answer == 1)
+    if (user_answer == 1)
     {
-        fprintf(log, "You chose: 1) %s\n", chatter[function_index].svar1);
+        fprintf(chatlog, "You chose: 1) %s\n", manuscript_ptr[function_index].svar1);
     }
-    else if (answer == 2)
+    else if (user_answer == 2)
     {
-        fprintf(log, "You chose: 2) %s\n", chatter[function_index].svar2);
+        fprintf(chatlog, "You chose: 2) %s\n", manuscript_ptr[function_index].svar2);
     }
-    else if (answer == 3)
+    else if (user_answer == 3)
     {
-        fprintf(log, "Du gik tilbage til sidste spørgsmål\n");
+        fprintf(chatlog, "Du gik tilbage til sidste spørgsmål\n");
     }
 
-    // lukker filen chat-log.txt
-    fclose(log);
+    fclose(chatlog);
 }
 
-void anxiety_tracker(int climate_anxiety[], int anxiety_counter)
+void anxiety_tracker(int climate_anxiety[], int climate_anxiety_counter)
 {
-    int answer;
+    int user_answer;
 
     printf("Hvor meget klima-angst foeler du lige nu paa en skala fra 1-10? ");
-    scanf("%d", &answer);
+    scanf("%d", &user_answer);
     printf("\nTak!\n");
 
-    climate_anxiety[anxiety_counter] = answer;
+    climate_anxiety[climate_anxiety_counter] = user_answer;
 }
 
-void print_anxiety(int climate_anxiety[])
+void print_anxiety_graph(int climate_anxiety[])
 {
-    // forklarer det her in person :)
-    // funktionen her printer en illustration af brugerens klima-angst
-    
-    char line[12][50];
-    char integer1[3];
-    char integer2[3];
-    char integer3[3];
-    int i, k;
+    char empty_line[300] = {"|                                                    \n"};
+    char graph_lines[15][500];
+    int i, k, s;
+    char char_integers[12][3] = {"-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    char *ptr;
 
-    strcpy(line[11], "|___________________________\n");
-    
-    for (i = 0; i < 11; i++)
+    for (i = 0; i < 14; i++)
     {
-        strcpy(line[i], "|                    \n");
+        strcpy(graph_lines[i], empty_line);
     }
 
-    for (k = 0; k < 3; k++)
-    {
-        for (i = 1; i < 11; i++)
-        {
-            if (climate_anxiety[k] == i && k == 0)
-            {
-                strcpy(line[11 - i], "|     ");
+    strcpy(graph_lines[14], "|____________________________\n");
 
-                itoa(i, integer1, 10);
-                strcat(line[11 - i], integer1);
-                strcat(line[11 - i], "\n");
-            }
-            else if (climate_anxiety[k] == i && k == 1)
+    for (i = 0; i < 3; i++)
+    {
+        for (k = 0; k < 14; k++)
+        {
+            if (climate_anxiety[i] == k && k == climate_anxiety[0])
             {
-                strcpy(line[11 - i], "|             ");
-                itoa(i, integer2, 10);
-                strcat(line[11 - i], integer2);
-                strcat(line[11 - i], "\n");
+                ptr = graph_lines[13 - k];
+
+                strcat(ptr, "|");
+
+                for (s = 0; s < 3; s++)
+                {
+                    strcat(ptr, char_integers[0]);
+                }
+
+                strcat(ptr, char_integers[k]);
             }
-            else if (climate_anxiety[k] == i && k == 2)
+
+            else if (climate_anxiety[i] == k && k == climate_anxiety[1])
             {
-                strcpy(line[11 - i], "|                    ");
-                itoa(i, integer3, 10);
-                strcat(line[11 - i], integer3);
-                strcat(line[11 - i], "\n");
+                ptr = graph_lines[13 - k];
+
+                strcat(ptr, "|");
+
+                for (s = 0; s < 11; s++)
+                {
+                    strcat(ptr, char_integers[0]);
+                }
+
+                strcat(ptr, char_integers[k]);
+            }
+
+            else if (climate_anxiety[i] == k && k == climate_anxiety[2])
+            {
+                ptr = graph_lines[13 - k];
+
+                strcat(ptr, "|");
+
+                for (s = 0; s < 19; s++)
+                {
+                    strcat(ptr, char_integers[0]);
+                }
+
+                strcat(ptr, char_integers[k]);
             }
         }
     }
 
-    printf("\n\n\nHer er progressionen over din klima-angst igennem samtalen: \n\n");
+    printf("\nHer er progressionen over din klima-angst igennem samtalen: \n\n");
 
-    for (i = 0; i < 12; i++)
+    printf("\n");
+
+    printf("\n       ____________________");
+    printf("\n      |x-akse : tid        |\n      |y-akse : klima-angst|\n");
+    printf("      |____________________| \n");
+
+    printf("\n");
+
+    for (i = 0; i < 15; i++)
     {
-        printf("%s", line[i]);
+        printf("%s", graph_lines[i]);
+    }
+}
+
+void print_graph_comment(int climate_anxiety[])
+{
+    // case 1 - klima-angst er den sammee hele vejen igennem
+    if (climate_anxiety[0] == climate_anxiety[1] && climate_anxiety[1] == climate_anxiety[2])
+    {
+        printf("\nDin klima-angst er helt uaendret! Maaske vi kunne chatte igen snart?\n");
+
+        if (climate_anxiety[2] > 5)
+        {
+            printf("\nDin klima-angst er nemlig paa et hoejt niveau\n");
+        }
+        else
+        {
+            printf("\nDin klima-angst er heldigvis paa et lavt niveau og det er rigtig godt at se! :)\n");
+        }
     }
 
-    printf("\n\n");
+    // case 2 - klima-angst trender nead
+    else if (climate_anxiety[0] >= climate_anxiety[1] && climate_anxiety[1] >= climate_anxiety[2])
+    {
+        printf("\nDet er godt at se, at jeg kunne hjaelpe med at nedbringe din klima-angst!\n");
+        if (climate_anxiety[2] > 5)
+        {
+            printf("\nDin klima-angst er dog stadig paa et hoejt niveau, saa maaske vi kunne chatte igen snart?\n");
+        }
+        else
+        {
+            printf("\nDin klima-angst er heldigvis paa et lavt niveau og det er rigtig godt at se! :)\n");
+        }
+    }
+
+    // case 3 - klima-angst trender opad
+    else if (climate_anxiety[0] <= climate_anxiety[1] && climate_anxiety[1] <= climate_anxiety[2])
+    {
+        printf("\nSikke noget! Du har faaet mere klima-angst af at chatte med mig! Det er jeg ked af :(\n");
+
+        if (climate_anxiety[2] > 5)
+        {
+            printf("\nDin klima-angst er paa et hoejt niveau, saa maaske vi kunne chatte igen snart?\n");
+        }
+        else
+        {
+            printf("\nDin klima-angst er heldigvis paa et lavt niveau og det er rigtig godt at se! :)\n");
+        }
+    }
+
+    // case 4, 4-2-4 (tal, mindre, større)
+    else if (climate_anxiety[0] >= climate_anxiety[1] && climate_anxiety[1] <= climate_anxiety[2])
+    {
+        printf("\nSikke noget! Du har faaet mere klima-angst af at chatte med mig! Det er jeg ked af :(\n");
+
+        if (climate_anxiety[2] > 5)
+        {
+            printf("\nDin klima-angst er paa et hoejt niveau, saa maaske vi kunne chatte igen snart?\n");
+        }
+        else
+        {
+            printf("\nDin klima-angst er heldigvis paa et lavt niveau og det er rigtig godt at se! :)\n");
+        }
+    }
+
+    // case 5, 2-4-2 (tal, større, mindre)
+    else if (climate_anxiety[0] <= climate_anxiety[1] && climate_anxiety[1] >= climate_anxiety[2])
+    {
+        printf("\nDet er godt at se, at jeg kunne hjaelpe med at nedbringe din klima-angst!\n");
+        
+        if (climate_anxiety[2] > 5)
+        {
+            printf("\nDin klima-angst er dog stadig paa et hoejt niveau, saa maaske vi kunne chatte igen snart?\n");
+        }
+        else
+        {
+            printf("\nDin klima-angst er heldigvis paa et lavt niveau og det er rigtig godt at se! :)\n");
+        }
+    }
+}
+
+void read_context(char context[3][100])
+{
+    FILE *file = fopen("1st_context.txt", "r");
+    int i;
+
+    for (i = 0; i < 3; i++)
+    {
+        fgets(context[i], 100, file);
+    }
+
+    fclose(file);
+}
+
+void print_context(char context[3][100], int file_index)
+{
+    printf("\n%s\n", context[file_index]);
+    sleep(3);
+}
+
+void read_random_comments(char random_comments[9][100])
+{
+    int i;
+
+    FILE *file = fopen("random_comments.txt", "r");
+
+    for (i = 0; i < 9; i++)
+    {
+        fgets(random_comments[i], 100, file);
+    }
+
+    fclose(file);
+}
+
+void print_random_comment(char random_comments[9][100])
+{
+    int random_index = rand() % 9;
+
+    printf("\n%s\n", random_comments[random_index]);
+
+    sleep(3);
 }
