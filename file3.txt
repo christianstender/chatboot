@@ -1,48 +1,48 @@
-Q0 (from file.txt)Hvordan kan du bruge dine kreative evner til at haandtere dine bekymringer omkring klimaaendringer? 
-S1(0)[[Jeg kan bruge min kreativitet til at skrive, tegne, male eller lave musik om mine bekymringer og foelelser. |Spoergsmaal 2]]
-S2(0)[[Jeg kan bruge min kreativitet til at finde loesninger og idéer til, hvordan jeg kan handle paa mine bekymringer omkring klimaaendringer.|Spoergsmaal 3]]
+Hvordan kan du bruge dine kreative evner til at haandtere dine bekymringer omkring klimaaendringer? 
+(1) Jeg kan bruge min kreativitet til at skrive, tegne, male eller lave musik om mine bekymringer og foelelser.
+(2) Jeg kan bruge min kreativitet til at finde loesninger og idéer til, hvordan jeg kan handle paa mine bekymringer omkring klimaaendringer.
 waste
 waste
 waste
-Q1 Det kan vaere en god maade at haandtere bekymringer paa at bruge sin kreativitet til at udtrykke sine foelelser og tanker om emnet. Det kan ogsaa vaere en god idé at proeve forskellige kreative udtryksformer og se, hvilken der passer bedst til en selv. Hvordan kan du goere det?
-S1(1)[[Jeg kan bruge min kreativitet til at lave plakater, film eller andre former for kunst, der kan vaekke andres opmaerksomhed og interesse for emnet.|Spoergsmaal 4]]
-S2(1)[[Jeg kan bruge min kreativitet til at lave aktiviteter eller arrangementer, der kan engagere andre i emnet og faa dem til at reflektere over deres egne bekymringer omkring klimaaendringer. |Spoergsmaal 5]]
-Q2 Det kan vaere en god maade at haandtere bekymringer paa at bruge sin kreativitet til at finde loesninger og idéer til, hvordan man kan handle paa sine bekymringer. Det kan ogsaa vaere en god idé at dele sine idéer med andre og faa feedback og stoette fra dem. Hvordan kan du goere det?
-S1(2)[[Jeg kan bruge min kreativitet til at lave plakater, film eller andre former for kunst, der kan vaekke andres opmaerksomhed og interesse for emnet.|Spoergsmaal 6]]
-S2(2)[[Jeg kan bruge min kreativitet til at lave aktiviteter eller arrangementer, der kan engagere andre i emnet og faa dem til at reflektere over deres egne bekymringer omkring klimaaendringer. |Spoergsmaal 7]]
-Q3 Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer ved at bruge sin kreativitet til at skabe opmaerksomhed og interesse for emnet. Hvordan kan du bruge dine omgivelser til at haandtere dine bekymringer omkring klimaaendringer? 
-S1(3)[[Jeg kan laegge maerke til de smaa ting i naturen, som f.eks. fugle, bier og blomster, og foele glaede og ro fra dem.|Spoergsmaal 8]]
-S2(3)[[Jeg kan tage en tur ud i naturen og nyde dens skoenhed og styrke, og foele en forbindelse til jorden og livet paa den.|Spoergsmaal 9]]
-Q4 Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer paa at bruge sin kreativitet til at lave aktiviteter eller arrangementer, der kan faa andre til at reflektere over deres egne bekymringer omkring klimaaendringer. Det kan ogsaa vaere en god idé at soege efter samarbejdspartnere eller organisationer, der har samme maal og kan stoette dig i dit engagement. Hvordan kan du bruge mindfulness til at haandtere dine bekymringer omkring klimaaendringer?
-S1(4)[[Jeg kan bruge mindfulnessoevelser, som f.eks. vejrtraekning og naervaer, til at finde ro og fokus i nuet og slippe tankerne om fremtiden.|Spoergsmaal 10]]
-S2(4)[[Jeg kan bruge mindfulnessoevelser, som f.eks. lytten og taknemmelighed, til at aabne op for mine sanser og opleve glaede og taknemmelighed for det, der er her og nu. |Spoergsmaal 11]]
-Q5 Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer ved at bruge sin kreativitet til at skabe opmaerksomhed og interesse for emnet. Hvordan kan du bruge dine omgivelser til at haandtere dine bekymringer omkring klimaaendringer? 
-S1(5) [[Jeg kan laegge maerke til de smaa ting i naturen, som f.eks. fugle, bier og blomster, og foele glaede og ro fra dem.Spoergsmaal 12]]
-S2(5)[[Jeg kan tage en tur ud i naturen og nyde dens skoenhed og styrke, og foele en forbindelse til jorden og livet paa den.|Spoergsmaal 13]]
-Q6 Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer paa at bruge sin kreativitet til at lave aktiviteter eller arrangementer, der kan faa andre til at reflektere over deres egne bekymringer omkring klimaaendringer. Det kan ogsaa vaere en god idé at soege efter samarbejdspartnere eller organisationer, der har samme maal og kan stoette dig i dit engagement. Hvordan kan du bruge mindfulness til at haandtere dine bekymringer omkring klimaaendringer?
-S1(6)[[Jeg kan bruge mindfulnessoevelser, som f.eks. vejrtraekning og naervaer, til at finde ro og fokus i nuet og slippe tankerne om fremtiden.|Spoergsmaal 14]]
-S2(6)[[Jeg kan bruge mindfulnessoevelser, som f.eks. lytten og taknemmelighed, til at aabne op for mine sanser og opleve glaede og taknemmelighed for det, der er her og nu|Spoergsmaal 15]]
-Q7 Det kan vaere en god maade at haandtere bekymringer paa at laegge maerke til de smaa ting i naturen og foele glaede og ro fra dem. Det kan ogsaa vaere en god idé at laere mere om naturen og dens liv og opleve dets mangfoldighed og skoenhed. Vil du lige proeve at tage dig selv et oejeblik til at reflektere over andre ting du maaske overser i din hverdag.
-S1(7)[[Ja, jeg har taenkt over noget.|Spoergsmaal 16]]
-S2(7)[[Uh, jeg kan ikke lige komme paa noget. Lad os fortsaette. |Spoergsmaal 17]]
-Q8 Det kan vaere en god maade at haandtere bekymringer paa at tage en tur ud i naturen og nyde dens skoenhed og styrke. Det kan ogsaa vaere en god idé at faa en foelelse af forbindelse til jorden og livet paa den og foele en stoerre respekt og omsorg for naturen.9
-S1(8)[["waste"|Spoergsmaal 18]]
-S2(8)[["waste"|Spoergsmaal 19]]
-Q9 Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at finde ro og fokus i nuet og slippe tankerne om fremtiden. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
-S1(9)[["waste"|Spoergsmaal 20]]
-S2(9)[["waste"|Spoergsmaal 21]]
-Q10 Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at aabne op for sine sanser og opleve glaede og taknemmelighed for det, der er her og nu. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
-S1(10)[["waste"|Spoergsmaal 22]]
-S2(10)[["waste"|Spoergsmaal 23]]
-Q11 Det kan vaere en god maade at haandtere bekymringer paa at laegge maerke til de smaa ting i naturen og foele glaede og ro fra dem. Det kan ogsaa vaere en god idé at laere mere om naturen og dens liv og opleve dets mangfoldighed og skoenhed. Vil du lige proeve at tage dig selv et oejeblik til at reflektere over andre ting du maaske overser i din hverdag.
-S1(11)[[Ja, jeg har taenkt over noget|Spoergsmaal 24]]
-S2(11)[[Uh, jeg kan ikke lige komme paa noget. Lad os bare fortsaette. Spoergsmaal 25]]
-Q12 Det kan vaere en god maade at haandtere bekymringer paa at tage en tur ud i naturen og nyde dens skoenhed og styrke. Det kan ogsaa vaere en god idé at faa en foelelse af forbindelse til jorden og livet paa den og foele en stoerre respekt og omsorg for naturen.
-S1(12)[["waste"|Spoergsmaal 26]]
-S2(12)[["waste"|Spoergsmaal 27]]
-Q13 Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at finde ro og fokus i nuet og slippe tankerne om fremtiden. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
-S1(13)[["waste"|Spoergsmaal 28]]
-S2(13)[["waste"|Spoergsmaal 29]]
-Q14 Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at aabne op for sine sanser og opleve glaede og taknemmelighed for det, der er her og nu. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
-S1(14)[["waste"|Spoergsmaal 30]]
-S2(14)[["waste"|Spoergsmaal 31]]
+Det kan vaere en god maade at haandtere bekymringer paa at bruge sin kreativitet til at udtrykke sine foelelser og tanker om emnet. Det kan ogsaa vaere en god idé at proeve forskellige kreative udtryksformer og se, hvilken der passer bedst til en selv. Hvordan kan du goere det?
+(1) Jeg kan bruge min kreativitet til at lave plakater, film eller andre former for kunst, der kan vaekke andres opmaerksomhed og interesse for emnet.
+(2) Jeg kan bruge min kreativitet til at lave aktiviteter eller arrangementer, der kan engagere andre i emnet og faa dem til at reflektere over deres egne bekymringer omkring klimaaendringer.
+Det kan vaere en god maade at haandtere bekymringer paa at bruge sin kreativitet til at finde loesninger og idéer til, hvordan man kan handle paa sine bekymringer. Det kan ogsaa vaere en god idé at dele sine idéer med andre og faa feedback og stoette fra dem. Hvordan kan du goere det?
+(1) Jeg kan bruge min kreativitet til at lave plakater, film eller andre former for kunst, der kan vaekke andres opmaerksomhed og interesse for emnet.
+(2) Jeg kan bruge min kreativitet til at lave aktiviteter eller arrangementer, der kan engagere andre i emnet og faa dem til at reflektere over deres egne bekymringer omkring klimaaendringer.
+Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer ved at bruge sin kreativitet til at skabe opmaerksomhed og interesse for emnet. Hvordan kan du bruge dine omgivelser til at haandtere dine bekymringer omkring klimaaendringer? 
+(1) Jeg kan laegge maerke til de smaa ting i naturen, som f.eks. fugle, bier og blomster, og foele glaede og ro fra dem.
+(2) Jeg kan tage en tur ud i naturen og nyde dens skoenhed og styrke, og foele en forbindelse til jorden og livet paa den.
+Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer paa at bruge sin kreativitet til at lave aktiviteter eller arrangementer, der kan faa andre til at reflektere over deres egne bekymringer omkring klimaaendringer. Det kan ogsaa vaere en god idé at soege efter samarbejdspartnere eller organisationer, der har samme maal og kan stoette dig i dit engagement. Hvordan kan du bruge mindfulness til at haandtere dine bekymringer omkring klimaaendringer?
+(1) Jeg kan bruge mindfulnessoevelser, som f.eks. vejrtraekning og naervaer, til at finde ro og fokus i nuet og slippe tankerne om fremtiden.
+(2) Jeg kan bruge mindfulnessoevelser, som f.eks. lytten og taknemmelighed, til at aabne op for mine sanser og opleve glaede og taknemmelighed for det, der er her og nu.
+Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer ved at bruge sin kreativitet til at skabe opmaerksomhed og interesse for emnet. Hvordan kan du bruge dine omgivelser til at haandtere dine bekymringer omkring klimaaendringer? 
+(1)  Jeg kan laegge maerke til de smaa ting i naturen, som f.eks. fugle, bier og blomster, og foele glaede og ro fra dem.
+(2) Jeg kan tage en tur ud i naturen og nyde dens skoenhed og styrke, og foele en forbindelse til jorden og livet paa den.
+Det kan vaere en god maade at engagere andre i emnet omkring klimaaendringer paa at bruge sin kreativitet til at lave aktiviteter eller arrangementer, der kan faa andre til at reflektere over deres egne bekymringer omkring klimaaendringer. Det kan ogsaa vaere en god idé at soege efter samarbejdspartnere eller organisationer, der har samme maal og kan stoette dig i dit engagement. Hvordan kan du bruge mindfulness til at haandtere dine bekymringer omkring klimaaendringer?
+(1) Jeg kan bruge mindfulnessoevelser, som f.eks. vejrtraekning og naervaer, til at finde ro og fokus i nuet og slippe tankerne om fremtiden.
+(2) Jeg kan bruge mindfulnessoevelser, som f.eks. lytten og taknemmelighed, til at aabne op for mine sanser og opleve glaede og taknemmelighed for det, der er her og nu.
+Det kan vaere en god maade at haandtere bekymringer paa at laegge maerke til de smaa ting i naturen og foele glaede og ro fra dem. Det kan ogsaa vaere en god idé at laere mere om naturen og dens liv og opleve dets mangfoldighed og skoenhed. Vil du lige proeve at tage dig selv et oejeblik til at reflektere over andre ting du maaske overser i din hverdag.
+(1) Ja, jeg har taenkt over noget.
+(2) Uh, jeg kan ikke lige komme paa noget. Lad os fortsaette.
+Det kan vaere en god maade at haandtere bekymringer paa at tage en tur ud i naturen og nyde dens skoenhed og styrke. Det kan ogsaa vaere en god idé at faa en foelelse af forbindelse til jorden og livet paa den og foele en stoerre respekt og omsorg for naturen.
+(1) "waste"
+(2) "waste"
+Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at finde ro og fokus i nuet og slippe tankerne om fremtiden. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
+(1) "waste"
+(2) "waste"
+Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at aabne op for sine sanser og opleve glaede og taknemmelighed for det, der er her og nu. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
+(1) "waste"
+(2) "waste"
+Det kan vaere en god maade at haandtere bekymringer paa at laegge maerke til de smaa ting i naturen og foele glaede og ro fra dem. Det kan ogsaa vaere en god idé at laere mere om naturen og dens liv og opleve dets mangfoldighed og skoenhed. Vil du lige proeve at tage dig selv et oejeblik til at reflektere over andre ting du maaske overser i din hverdag.
+(1) Ja, jeg har taenkt over noget.
+(2) Uh, jeg kan ikke lige komme paa noget. Lad os bare fortsaette.
+Det kan vaere en god maade at haandtere bekymringer paa at tage en tur ud i naturen og nyde dens skoenhed og styrke. Det kan ogsaa vaere en god idé at faa en foelelse af forbindelse til jorden og livet paa den og foele en stoerre respekt og omsorg for naturen.
+(1) "waste"
+(2) "waste"
+Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at finde ro og fokus i nuet og slippe tankerne om fremtiden. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
+(1) "waste"
+(2) "waste"
+Det kan vaere en god maade at haandtere bekymringer paa at bruge mindfulnessoevelser til at aabne op for sine sanser og opleve glaede og taknemmelighed for det, der er her og nu. Det kan ogsaa vaere en god idé at laere mere om mindfulness og proeve forskellige oevelser for at se, hvilken der passer bedst til en selv.
+(1) "waste"
+(2) "waste"
