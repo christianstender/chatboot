@@ -1,6 +1,6 @@
 Hvordan paavirker dine bekymringer dit arbejdsliv?
-(0) Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten.
-(0) Jeg kan foele mig udmattet og deprimeret.
+(1) Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten.
+(2) Jeg kan foele mig udmattet og deprimeret.
 waste
 waste
 waste
