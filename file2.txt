@@ -1,48 +1,48 @@
 Q0 (from file.txt)Hvordan paavirker dine bekymringer dit arbejdsliv?
-S1(0)[[Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten. |Spoergsmaal 2]]
-S2(0)[[Jeg kan foele mig udmattet og deprimeret|Spoergsmaal 3]]
+(0) Jeg har svaert ved at fokusere paa andre ting og kan have svaert ved at sove om natten.
+(0) Jeg kan foele mig udmattet og deprimeret.
 waste
 waste
 waste
-Q1Hvordan faar du tanken om klimaaendringer ud af hovedet?
-S1(1)[[Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante. |Spoergsmaal 4]]
-S2(1)[[Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv|Spoergsmaal 5]]
-Q2Hvordan faar du tanken om klimaaendringer ud af hovedet?
-S1(2)[[Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante. |Spoergsmaal 6]]
-S2(2)[[Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv|Spoergsmaal 7]]
-Q3 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan paavirker dine bekymringer dine relationer til andre?
-S1(3)[[Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.|Spoergsmaal 8]]
-S2(3)[[Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.|Spoergsmaal 9]]
-Q4 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan paavirker dine bekymringer dine relationer til andre?
-S1(4)[[Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.|Spoergsmaal 10]]
-S2(4)[[Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.|Spoergsmaal 11]]
-Q5 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer?  
-S1(5) [[Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.|Spoergsmaal 12]]
-S2(5)[[Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre|Spoergsmaal 13]]
-Q6 Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer? 
-S1(6)[[Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.|Spoergsmaal 14]]
-S2(6)[[Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre|Spoergsmaal 15]]
-Q7 Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
-S1(7)[[Uh, jeg er ikke lige klar til at reflektere over noget endnu.|Spoergsmaal 16]]
-S2(7)[[Ja, jeg er klar til at gaa videre.|Spoergsmaal 17]]
-Q8 Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
-S1(8)[["waste"|Spoergsmaal 18]]
-S2(8)[["waste"Spoergsmaal 19]]
-Q9 Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
-S1(9)[["waste"|Spoergsmaal 20]]
-S2(9)[["waste"|Spoergsmaal 21]]
-Q10 Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
-S1(10)[["waste"|Spoergsmaal 22]]
-S2(10)[["waste" | Spoergsmaal 23]]
-Q11 Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
-S1(11)[[Uh, jeg er ikke lige klar til at reflektere over noget endnu.|Spoergsmaal 24]]
-S2(11)[[Ja, jeg er klar til at gaa videre.|Spoergsmaal 25]]
-Q12 Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. 
-S1(12)[["waste"|Spoergsmaal 26]]
-S2(12)[["waste"|Spoergsmaal 27]]
-Q13 Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op.
-S1(13)[["waste"|Spoergsmaal 28]]
-S2(13)[["waste"|Spoergsmaal 29]]
-Q14 Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
-S1(14)[["waste"|Spoergsmaal 30]]
-S2(14)[["waste"|Spoergsmaal 31]]
+Hvordan faar du tanken om klimaaendringer ud af hovedet?
+(1) Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante.
+(2) Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv.
+Hvordan faar du tanken om klimaaendringer ud af hovedet?
+(1) Jeg proever at distrahere mig selv med andre ting, som jeg synes er sjove eller interessante.
+(2) Jeg proever at fokusere paa de ting, jeg er taknemmelig for og de gode ting i mit liv.
+Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan paavirker dine bekymringer dine relationer til andre?
+(1) Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.
+(2) Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.
+Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan paavirker dine bekymringer dine relationer til andre?
+(1) Jeg kan have svaert ved at vaere til stede i oejeblikket og kan blive irritabel eller trist.
+(2) Jeg kan have svaert ved at tale om mine bekymringer og kan foele mig isoleret fra andre.
+Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa andre ting og distrahere sig selv. Det kan ogsaa vaere en god idé at finde aktiviteter, der faar dig til at foele glaede og velvaere. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer?  
+(1) Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.
+(2) Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre.
+Det kan vaere en god maade at haandtere bekymringer paa at fokusere paa de ting, man er taknemmelig for og de gode ting i sit liv. Det kan ogsaa vaere en god idé at tale med andre om de ting, man er taknemmelig for og dele glaeden med dem. Hvordan foeler du dig, naar du taler med fremmede om dine bekymringer omkring klimaaendringer? 
+(1) Jeg kan foele mig nervoes og usikker paa, om andre vil forstaa og bakke mig op.
+(2) Jeg kan foele mig lettet og faa en foelelse af faellesskab og stoette fra andre.
+Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
+(1) Uh, jeg er ikke lige klar til at reflektere over noget endnu.
+(2) Ja, jeg er klar til at gaa videre.
+Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
+(1) "waste"
+(2) "waste"
+Det kan vaere svaert at vaere til stede i oejeblikket og have en god relation til andre, naar man er bekymret. Det kan vaere en god idé at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
+(1) "waste"
+(2) "waste"
+Det kan vaere svaert at tale om sine bekymringer og foele sig isoleret fra andre. Det kan vaere en god idé at finde en person, du stoler paa, og tale med dem om dine bekymringer og foelelser.
+(1) "waste"
+(2) "waste"
+Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op. Giv dig selv et oejeblik til at reflektere over de emner vi har vaeret igennem indtil videre og sig til naar du er klar til at gaa videre.
+(1) Uh, jeg er ikke lige klar til at reflektere over noget endnu.
+(1) Ja, jeg er klar til at gaa videre.
+Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem. 
+(1) "waste"
+(1) "waste"
+Det er forstaaeligt at foele sig nervoes og usikker, naar man taler med fremmede om sine bekymringer. Det kan vaere en god idé at forberede sig paa samtalen og huske, at der ogsaa kan vaere andre, der forstaar og bakker op.
+(1) "waste"
+(2) "waste"
+Det er godt at foele sig lettet og faa en foelelse af faellesskab og stoette fra andre. Det kan vaere en god idé at soege efter muligheder for at tale med andre om dine bekymringer og faa stoette og forstaaelse fra dem.
+(1) "waste"
+(2) "waste"
